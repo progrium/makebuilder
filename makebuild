@@ -1,0 +1,8 @@
+#!/bin/bash
+set -eo pipefail
+work_root=/tmp/src
+mkdir -r $work_root
+cat | tar -xC $work_root
+cd $work_root
+make build LOCAL=1 >&2
+tar -C build -cf .
