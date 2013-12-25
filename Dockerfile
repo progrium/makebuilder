@@ -9,4 +9,4 @@ RUN mkdir /tmp/go && \
     rm -rf /tmp/go
 ADD ./makebuild /usr/bin/makebuild
 
-ENTRYPOINT makebuild
+CMD makebuild
