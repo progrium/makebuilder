@@ -5,4 +5,4 @@ RUN apt-get update; apt-get install -y build-essential curl wget ruby1.9.1 rubyg
 RUN cd /usr/bin && curl -sL j.mp/godeb | tar -xzC . && ./godeb install 1.2
 ADD ./makebuild /usr/bin/makebuild
 
-CMD makebuild
+ENTRYPOINT makebuild
